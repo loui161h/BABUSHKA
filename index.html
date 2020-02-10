@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bistro BABUSHKA</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|Poppins:700|Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="">
+    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
 </head>
 
 <style>
@@ -16,8 +16,14 @@
 
     nav {
         text-align: center;
-        padding: 18px;
+        padding: 22px;
         margin-top: 0vw;
+    }
+
+
+    nav .valgt {
+        background-color: #fffff5;
+
     }
 
     button {
@@ -27,16 +33,9 @@
         border: none;
         cursor: pointer;
         background-color: transparent;
+        text-transform: uppercase;
     }
 
-    p {
-        font-family: 'Source Sans Pro', sans-serif;
-    }
-
-    nav .valgt {
-        background-color: #fffff5;
-
-    }
 
     article {
         border: 0.5px solid black;
@@ -58,25 +57,29 @@
     }
 
     h1 {
-        font-family: sans-serif;
+        font-family: 'Questrial', sans-serif;
         font-size: 2rem;
         text-align: center;
         font-family: Brandon Grotesque;
+        text-transform: uppercase;
         font-weight: 400;
         margin-top: 16px;
         margin-bottom: 10px;
-
     }
 
     h2 {
-        font-family: 'Source Sans Pro', sans-serif;
-        font-weight: 500;
+        font-family: 'Questrial', sans-serif;
+        font-weight: bold;
     }
 
+    p {
+        font-family: 'Questrial', sans-serif;
+        line-height: 22px;
+    }
 </style>
 
 <div id="logo">
-    <img src="logo_2.svg" alt="logo">
+    <img src="logo.svg" alt="logo">
 </div>
 
 <nav class="menu">
@@ -84,11 +87,11 @@
     <button class="filter" data-ret="forretter">Forretter</button>
     <button class="filter" data-ret="hovedretter">Hovedretter</button>
     <button class="filter" data-ret="desserter">Desserter</button>
-    <button class="filter" data-ret="drikkevarer">Drikkevarer</button>
     <button class="filter" data-ret="sideorders">Sideorders</button>
+    <button class="filter" data-ret="drikkevarer">Drikkevarer</button>
+
     <h1>Alle</h1>
 </nav>
-
 
 
 
@@ -103,8 +106,8 @@
 
             <p class="kategori"></p>
             <!--            <p class="navn"></p>-->
-            <p class="pris"></p>
             <p class="kort"></p>
+            <p class="pris"></p>
             <p class="lang"></p>
             <p class="oprindelse"></p>
 
@@ -149,7 +152,7 @@
 
                     klon.querySelector("h2").textContent = madogdrikke.gsx$navn.$t;
 
-                    klon.querySelector(".pris").textContent = `Pris: ${madogdrikke.gsx$pris.$t} kr.`;
+                    klon.querySelector(".pris").textContent = `Pris: ${madogdrikke.gsx$pris.$t},-`;
                     klon.querySelector(".kort").textContent = madogdrikke.gsx$kort.$t;
                     /*           klon.querySelector(".lang").textContent = madogdrikke.gsx$lang.$t;*/
                     /*        klon.querySelector(".oprindelse").textContent = madogdrikke.gsx$oprindelse.$t;*/
@@ -178,8 +181,5 @@
             visMenukort();
 
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
