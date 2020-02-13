@@ -91,8 +91,8 @@
     }
 
     #detalje button {
-        color: white;
-        font-size: 1.5rem;
+        color: black;
+        font-size: 0.5rem;
         margin: 0.5em;
     }
 
@@ -100,24 +100,19 @@
         display: none;
     }
 
-    #detalje .luk {
+    #detalje #luk {
         position: fixed;
         top: 0;
-        left: 0;
-        font-size: 2rem;
+        left: 5em;
+        font-size: 1.5rem;
 
     }
 
     #detalje .mad {
         margin: 120px;
-        padding: 48px;
+        padding: 40px;
         margin-top: 10px;
         background-color: #fffff5;
-
-    }
-
-    #detalje img {
-        width: 80%;
 
     }
 
@@ -166,7 +161,7 @@
 
     <section id="detalje" class="skjul">
         <article class="mad">
-            <button class="luk">x</button>
+            <button id="luk">x</button>
             <h2></h2>
             <p></p>
             <p></p>
@@ -240,7 +235,7 @@
             detalje.querySelector("h2").textContent = mad.gsx$navn.$t;
             detalje.querySelector("p").textContent = mad.gsx$lang.$t;
             detalje.querySelector("p+p").textContent = mad.gsx$oprindelse.$t;
-            detalje.querySelector("img").src = `imgs/small/${mad.gsx$billede.$t}-sm.jpg`;
+            detalje.querySelector("img").src = `imgs/large/${mad.gsx$billede.$t}.jpg`;
         }
 
         function addEventListenersToButtons() {
