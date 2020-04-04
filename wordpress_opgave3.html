@@ -120,6 +120,7 @@
     #detalje .mad h2 {
         text-align: left;
     }
+
 </style>
 
 <div id="logo">
@@ -136,6 +137,7 @@
 
     <script>
         const endpoint = "http://louisesettrup.dk/kea/wordpress/babushka/wp-json/wp/v2/pages/11";
+        /* ID i ENDPOINT ÆNDRES AFHÆNGIG AF HVILKEN SIDE MAN VIL SE */
 
 
         document.addEventListener("DOMContentLoaded", start);
@@ -155,5 +157,8 @@
             document.querySelector(".title").textContent = page.title.rendered;
             document.querySelector(".content").innerHTML = page.content.rendered;
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
